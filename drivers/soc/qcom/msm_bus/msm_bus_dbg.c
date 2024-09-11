@@ -735,9 +735,8 @@ static const struct file_operations msm_bus_dbg_update_request_fops = {
 static ssize_t msm_bus_dbg_dump_clients_read(struct file *file,
 	char __user *buf, size_t count, loff_t *ppos)
 {
-	int j, cnt;
+	int cnt;
 	char msg[50];
-	struct msm_bus_cldata *cldata = NULL;
 
 	cnt = scnprintf(msg, 50,
 		"\nDumping curent client votes to trace log\n");
